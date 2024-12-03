@@ -1,0 +1,10 @@
+Analysis protocol
+
+1. Pick ROIs for each FOV and save them in one ROI.zip (avoid the first one if it goes out of focus)
+    Things to keep in mind: Pick the last time-point such that all cells are still in focus - picked it to be 70 for this dataset
+2. Run the extract_ROIs.ipynb to extract the BF images of the ROIs
+3. Run YeastMate on the cropped BF files (make sure to have the pixel size accurate, 156 nm for Fire(2by2) at 60X)
+4. Remove the "_mask" suffix so that the masks are compatible with acdc
+5. Manually curate and edit masks and their tracks in acdc
+6. Generate the plots
+
